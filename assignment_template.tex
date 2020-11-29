@@ -22,6 +22,8 @@
 \usepackage{listings}
 \usepackage{framed}
 \usepackage{tikz}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
 
 %\solutiontrue
 % The lecture title, e.g. "Web Information Retrieval".
@@ -49,6 +51,12 @@
 \begin{document}
 
 \maketitle
+
+\centering \textbf{Team:} Bravo\\
+\centering \textbf{Members:}\\
+\centering  Gaurav Kumar (220200656)\\
+\centering  Pavithree Shetty (220200661)\\
+\centering  Nisha Sharma (220202359)\\
 
 \section{Recursive Query: DNS \hfill{20 Points}}
 For this task we will extend the routing table from the fourth task on Assignment 1.
@@ -123,7 +131,8 @@ Let us assume a client with the following IP address 67.4.5.2 wants to resolve t
 You can further assume the root name server has the IP address of 88.8.2.1 and the name-server for \texttt{com} has the IP address 156.3.20.2. 
 Finally the domain is handled by a name server with the IP of 21.155.36.7.
 
-Please explain how the traffic flows through the network in order to resolve the recursive DNS query. You can assume ARP tables are cached so that no ARP-requests have to be made. \\ \\ \textbf{Solution:}
+Please explain how the traffic flows through the network in order to resolve the recursive DNS query. You can assume ARP tables are cached so that no ARP-requests have to be made.
+\subsection{Solution:}
 \begin{enumerate}
 \item The client with IP address \textbf{67.4.5.2} reaches the router\textbf{R1} in order to issue a \textbf{DNS request} to the root name server with the destination IP address \textbf{88.8.2.1}. Now the router \textbf{R1} looks into its routing table and finds the next hop to be \textbf{147.71.2.3} in order to reach the network \textbf{88.0.0.0} and reaches the Router \textbf{R2} . Now since router \textbf{R2} is directly connected to the network \textbf{88.0.0.0},it delivers the \textbf{IP packet} requesting the IP address of \textbf{subdomain.webscienceexample.com} to the root name server at   \textbf{88.8.2.1} .
 \item The root name server responds with the referral to top level domain \textbf{.com} with IP address \textbf{156.3.20.2}. Now this IP packet is routed back from the destination \textbf{88.8.2.1} to client at \textbf{67.4.5.2}. This packet from router \textbf{R2} reaches router \textbf{R1} with the next hop \textbf{147.71.2.1} . Since the network \textbf{67.0.0.0} is directly connected to router \textbf{R1}. The packet gets delivered to the client at \textbf{67.4.5.2}.
@@ -142,10 +151,74 @@ Please explain how the traffic flows through the network in order to resolve the
 \end{enumerate}
 
 \section{World Wide Web \hfill{14 Points}}
+\subsection{Two different motivation points for the construction of the world wide web}
 \begin{enumerate}
-    \item Name two different motivation points for the construction of the world wide web and explain why these points were necessary.
-    \item Describe five design principles of the world wide web with your own words. 
+    \item \textbf{Decentralize Network}
+	\begin{itemize}
+    		\item Earlier every data was organized and transmitted through a centralised system.
+		\item Slowed the process of transmission and information exchange between two host.
+		\item Not everyone had the freedom to contribute for the development of this system.
+		\item To give Power to people rather than only a central admistration.
+	\end{itemize}
+    \item \textbf{Exchange of information}
+	\begin{itemize}
+    		\item The major issue faced while data transmission was the exchange of information was very restricted due to various contraints.
+		\item Both host was required to have same system which were compatible with each other for data transmission.
+		\item Both host was required to have same operating system, software etc for successful data transmission.
+		\item To create a network which is independent of any technical restriction
+	\end{itemize}
+    \item \textbf{Crossing network boundaries}
+	\begin{itemize}
+    		\item Another issue which movitate Tim Berners Lee to create was being able to connect to system beyond network boundaries.
+		\item It was time consuming and required user to remember a lot of commands for transmission.
+		\item To be able to reach people far away from the host.
+	\end{itemize}
+    \item \textbf{Combining Hypertext with network}
+	\begin{itemize}
+    		\item To be able to combine the capability of hypertext with transmission of data over the network.
+	\end{itemize}
 \end{enumerate}
+
+\subsection{Five design principles of the world wide web}
+\begin{enumerate}
+    \item \textbf{Test of Independent invention}
+	\begin{itemize}
+    		\item In a centralized system if there are two similar ideas, one would be discared thereby lossing the efforts and idea
+		\item World wide web gave the opportunity to those similar ideas to coexist by integrating them smoothly and imporve those idea with incremental efforts
+	\end{itemize}
+    \item \textbf{HyperText}
+	\begin{itemize}
+    		\item The Hypertext was combined with networking capability to create world wide web
+	\end{itemize}
+    \item \textbf{Networking Capability}
+	\begin{itemize}
+    		\item The ability to reach beyond the network boundaries.
+	\end{itemize}
+    \item \textbf{URL}
+	\begin{itemize}
+    		\item Global naming convention for every website which is easy to remember
+		\item The URL need not be registered, only the domain names are required to register
+	\end{itemize}
+    \item \textbf{No single point of failure}
+	\begin{itemize}
+    		\item Any subdomain may no longer be available/down, however web as a whole will not stop working.
+	\end{itemize}
+    \item \textbf{Scaling}
+	\begin{itemize}
+    		\item World wide web has the capabiliy to scale as and when the number of host/users starts increasing.
+	\end{itemize}
+    \item \textbf{Simple Language}
+	\begin{itemize}
+    		\item It was developed using html which is very simple and minimum syntax to remember, which helps people contribute easily.
+	\end{itemize}
+    \item \textbf{Effortless}
+	\begin{itemize}
+    		\item Accessing and contributing was made effortless with around 80\% interaction and only 20\% efforts
+	\end{itemize}
+    \item \textbf{Easy to provide content using http}
+    \item \textbf{Can work independently and contribute anonymously}
+\end{enumerate}
+
 
 \section{Python Programming \hfill{26 points}}
 \subsection{URL Parser \hfill{13 points}\label{url_parser}}
