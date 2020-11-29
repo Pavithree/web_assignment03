@@ -12,9 +12,6 @@
 import sys
 
 def url_parser(url_string):
-
-    # url_string = sys.argv[1]
-    # url_string = 'https://west.uni-koblenz.de/research/projects'
     url_dict = dict()
     scheme = url_string[:url_string.find(':')]
     domain = url_string[url_string.find('//')+2:]
@@ -25,16 +22,14 @@ def url_parser(url_string):
         domain = domain.split('#')[0]
         url = domain[:domain.find('#')]
     else: fragment = None
-    if '/' in domain:
-        path = domain[domain.find('/'):]
-        domain = domain[:domain.find('/')]
+    if '/' in domain: path = domain[domain.find('/'):]; domain = domain[:domain.find('/')]
     else: path = None
     if '?' in url_string: query = url.split('?')[1]; path = path[:path.find('?')]
     else: query = None
     top_level_domain = domain[domain.rfind('.')+1:]
     url_dict_path= path
     url_dict_domain = domain
-    # url_dict_domain = (lambda: domain, lambda: domain[:domain.find('/')])['/' in domain]()
+   
     url_dict_port = (lambda: None, lambda: url_dict_domain.split(':')[1])[':' in url_dict_domain]()
     if ':' in url_dict_domain: url_dict_domain = url_dict_domain.split(':')[0]; top_level_domain = top_level_domain.split(':')[0]
 
