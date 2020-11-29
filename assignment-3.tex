@@ -148,7 +148,45 @@ Please explain how the traffic flows through the network in order to resolve the
 \begin{enumerate}
     \item Explain in your own words the four layer of the Internet architecture.
     \item Formulate an example to show the usage of the aforementioned layers.
+\subsection{Four layers of the Internet Protocol suite:}
+\begin{enumerate}
+    \item \textbf{First Layer - Link Layer}
+	\begin{itemize}
+    		\item It is a protocol or group of methods that operate only on host's link.
+		\item The link is the physical and logical network component used to interconnect hosts or nodes in the network.
+		\item For example, how ethernet worked on a Local area network.
+	\end{itemize}
+    \item \textbf{Second Layer - Internet Layer}
+	\begin{itemize}
+    		\item It is a group of internetworking methods, protocols and specifications that are used to transport datagrams or packets from the originating host across network boundaries, if possible to the destination host specified by a network address or IP address.
+		\item It derives its name from function of facilitating internetworking, connecting multiple networks with each other through gateways and routers.
+	\end{itemize}
+    \item \textbf{Third Layer - Transport Layer}
+	\begin{itemize}
+    		\item It provides end-to-end communication services for applications within a layered architecture of network components and protocols.
+		\item It also provides convenient services such as connection-oriented data stream support, reliability, flow control, and multiplexing.
+	\end{itemize}
+    \item \textbf{Fourth Layer - Application Layer}
+	\begin{itemize}
+    		\item It is an abstraction layer reserved for process-to-process communications across an Internet Protocol computer network.
+		\item It uses transport layer protocols to establish process-to-process connections via ports. For example, Domain Name System, Simple Mail Transfer Protocol, etc.
+	\end{itemize}
 \end{enumerate}
+\subsection{Example to show usage of the four layers:}
+\begin{itemize}
+    	\item 
+	\item When transfering data like a file from one computer to another computer, we have a protocol on the application layer which enables a process to process communication channel.
+	\item The file is split into segments encapsulated into a TCP segment on the transport layer. The transport layer protocol is used to establish a host to host connection.
+	\item Each TCP segment is packed inside an IP packet which can then be routed between various routers across networks. The routing happens on the internet layer which interconnects different networks on the path of the packet.
+	\item In order to send data from one router to another in a network a linked layer protocol is used. IP packets are then encapsulated inside frames. Ethernet or DSL are typical linked layer protocols.
+	\item As the data arrives the encapsulation process is reversed in order to assemble the original file.
+\end{itemize}
+\bigbreak   REFERENCE: \href{https://commons.wikimedia.org/wiki/File:Data_Flow_of_the_Internet_Protocol_Suite.PNG}{https://commons.wikimedia.org/wiki/Data-Flow-of-the-Internet-Protocol-Suite}
+\begin{figure}[h!]
+  \includegraphics[width=\linewidth]{resources/data-flow.png}
+  \caption{Data Flow of the Internet Protocol Suite}
+  \label{Data Flow of the Internet Protocol Suite}
+\end{figure}
 
 \section{World Wide Web \hfill{14 Points}}
 \subsection{Two different motivation points for the construction of the world wide web}
