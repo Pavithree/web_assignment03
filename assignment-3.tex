@@ -171,22 +171,21 @@ Please explain how the traffic flows through the network in order to resolve the
     		\item It is an abstraction layer reserved for process-to-process communications across an Internet Protocol computer network.
 		\item It uses transport layer protocols to establish process-to-process connections via ports. For example, Domain Name System, Simple Mail Transfer Protocol, etc.
 	\end{itemize}
-\end{enumerate}
-\subsection{Example to show usage of the four layers:}
-\begin{itemize}
-    	\item 
-	\item When transfering data like a file from one computer to another computer, we have a protocol on the application layer which enables a process to process communication channel.
-	\item The file is split into segments encapsulated into a TCP segment on the transport layer. The transport layer protocol is used to establish a host to host connection.
-	\item Each TCP segment is packed inside an IP packet which can then be routed between various routers across networks. The routing happens on the internet layer which interconnects different networks on the path of the packet.
-	\item In order to send data from one router to another in a network a linked layer protocol is used. IP packets are then encapsulated inside frames. Ethernet or DSL are typical linked layer protocols.
-	\item As the data arrives the encapsulation process is reversed in order to assemble the original file.
-\end{itemize}
-\bigbreak   REFERENCE: \href{https://commons.wikimedia.org/wiki/File:Data_Flow_of_the_Internet_Protocol_Suite.PNG}{https://commons.wikimedia.org/wiki/Data-Flow-of-the-Internet-Protocol-Suite}
+	\bigbreak   REFERENCE: \url{https://commons.wikimedia.org/wiki/File:Data_Flow_of_the_Internet_Protocol_Suite.PNG}
 \begin{figure}[h!]
   \includegraphics[width=\linewidth]{resources/data-flow.png}
-  \caption{Data Flow of the Internet Protocol Suite}
+  \caption{Data Flow in the four layers}
   \label{Data Flow of the Internet Protocol Suite}
 \end{figure}
+\end{enumerate}
+\subsection{Example to show usage of the four layers:}
+Let’s suppose we’re using Skype on a laptop. We’re messaging our friend, who’s using Skype on their phone from a different network.
+\begin{itemize}
+	\item Skype, as a network-connected application, uses \textbf{Layer 4 (Application)} protocols like Telnet. If we send our friend a picture of our cat, Skype would be using the File Transfer Protocol (FTP).
+	\item \textbf{Layer 3 (Transport)} receives data from Layer 4 and segments it. Each segment, or data unit, has a source and destination port number, as well as a sequence number. The port number ensures that the segment reaches the correct application. The sequence number ensures that the segments arrive in the correct order.
+	\item \textbf{Layer 2} (Internet) transmits data segments between networks in the form of packets. When we message our friend, this layer assigns source and destination IP addresses to the data segments. Our IP address is the source, and our friend’s is the destination. Layer 2 also determines the best paths for data delivery.
+	\item \textbf{Layer 1 (Link)} receives packets from Layer 2. Whereas Layer 3 performs logical addressing (IPv4, IPv6), Layer 1 performs physical addressing. It adds sender and receiver MAC addresses to the data packet to form a data unit called a frame. Layer 1 enables frames to be transported via local media (e.g. copper wire, optical fiber, or air). This layer is embedded as software in our computer’s Network Interface Card (NIC). In short, Layer 1 allows the upper network layers to access media, and controls how data is placed and received from media.
+\end{itemize}
 
 \section{World Wide Web \hfill{14 Points}}
 \subsection{Two different motivation points for the construction of the world wide web}
@@ -265,55 +264,70 @@ Write a Python script called as \texttt{urlparser.py}. The script parses an url 
 Take a screenshot of the terminal output of your script for the following URLs
 \begin{enumerate}
     \item \url{https://www.facebook.com/photo.php?fbid=2068026323275211&set=a.269104153167446&type=3&theater}
+\begin{figure}[h!]
+  \includegraphics[width=\linewidth]{resources/facebook_urlparser.png}
+  \caption{Screenshot of the url prsing}
+  \label{Screenshot of the url parsing}
+  \end{figure}
     \item \url{http://www.blog.google.uk:1000/path/to/myfile.html?key1=value1&key2=value2#InTheDocument}
+\begin{figure}[h!]
+  \includegraphics[width=\linewidth]{resources/blog_google_urlparser.png}
+  \caption{Screenshot of the url prsing}
+  \label{Screenshot of the url parsing}
+  \end{figure}
     \item \url{https://www.overleaf.com/9565720ckjijuhzpbccsd#/347876331/}
+    \begin{figure}[h!]
+  \includegraphics[width=\linewidth]{resources/overleaf_urlparser.png}
+  \caption{Screenshot of the url prsing}
+  \label{Screenshot of the url parsing}
+  \end{figure}
     \item \url{ftp://root@west.uni.koblenz.de}
+    \begin{figure}[h!]
+  \includegraphics[width=\linewidth]{resources/root_urlparser.png}
+  \caption{Screenshot of the url prsing}
+  \label{Screenshot of the url parsing}
+  \end{figure}
     \item \url{https://west.uni-koblenz.de/studying/ws2021}
+    \begin{figure}[h!]
+  \includegraphics[width=\linewidth]{resources/unikoblenz_urlparser.png}
+  \caption{Screenshot of the url prsing}
+  \label{Screenshot of the url parsing}
+  \end{figure}
     
 \end{enumerate}
 
 You are not allowed to use any specific libraries that help in url parsing and regular expressions. 
 
-\begin{figure}[h!]
-  \includegraphics[width=\linewidth]{resources/urlparser.png}
-  \caption{Screenshot of the url parsing}
-  \label{Screenshot of the url parsing}
-\end{figure}
-
 \subsection{Simple HTTP Web Client \hfill{13 points}}
-You are asked to write a simple HTTP client (\textbf{httpclient.py})
-that takes a URL and is able to download that webpage from the World Wide Web and store it on your hard drive (in the same
-directory as your python code is running). The program should also print out the complete
-HTTP header of the response and store the header in a \textit{separate file}.
-
-
-You are allowed to use 1) socket, 2) \texttt{urlparser.py} that you implement for the Question~\ref{url_parser} 3) sys for reading input from the command-line. 
-
-
-Run your code on the following urls. Analyse the responses: (1) what is the response code (2) explain briefly why does the website respond with that code? 
-\begin{enumerate}
-\item 
-\url{http://example.com}
-\item\url{http://example.com/test.html}
-\item 
-\url{https://west.uni-koblenz.de/research/projects}
-\end{enumerate}
-
-\textbf{Warning:} Please don't make consecutive calls to the websites.
 \begin{figure}[h!]
   \includegraphics[width=\linewidth]{resources/403.png}
   \caption{403 status code}
   \label{403 status code}
 \end{figure}
+\begin{itemize}
+
+\item For url \textbf{https://west.uni-koblenz.de/research/projects}, returned code \textbf{403}, since this domain is restricting to let any external source connect to it through the defailt socket without providing appropriate authentication.
+
+\end{itemize}
 \begin{figure}[h!]
-  \includegraphics[width=\linewidth]{resources/301.png}
+  \includegraphics[width=\linewidth]{resources/404_a.png}
   \caption{301 status code}
   \label{301 status code}
 \end{figure}
+\begin{itemize}
+
+\item For url \textbf{http://example.com}, returned code \textbf{404}, since this domain no longer exists or never existed.
+
+\end{itemize}
 \begin{figure}[h!]
-  \includegraphics[width=\linewidth]{resources/400.png}
-  \caption{400 status code}
-  \label{400 status code}
+  \includegraphics[width=\linewidth]{resources/404_b.png}
+  \caption{404 status code}
+  \label{404 status code}
 \end{figure}
+\begin{itemize}
+
+\item For url \textbf{http://example.com/test.html}, returned code \textbf{404}, since this domain no longer exists or never existed.
+
+\end{itemize}
     
 \end{document}
