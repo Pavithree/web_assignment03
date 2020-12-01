@@ -300,33 +300,33 @@ You are not allowed to use any specific libraries that help in url parsing and r
 
 \subsection{Simple HTTP Web Client \hfill{13 points}}
 \begin{figure}[h!]
-  \includegraphics[width=\linewidth]{resources/403.png}
-  \caption{403 status code}
-  \label{403 status code}
-\end{figure}
-\begin{itemize}
-
-\item For url \textbf{https://west.uni-koblenz.de/research/projects}, returned code \textbf{403}, since this domain is restricting to let any external source connect to it through the defailt socket without providing appropriate authentication.
-
-\end{itemize}
-\begin{figure}[h!]
-  \includegraphics[width=\linewidth]{resources/404_a.png}
+  \includegraphics[width=\linewidth]{resources/301_new.png}
   \caption{301 status code}
   \label{301 status code}
 \end{figure}
 \begin{itemize}
 
-\item For url \textbf{http://example.com}, returned code \textbf{404}, since this domain no longer exists or never existed.
+\item \textbf{https://west.uni-koblenz.de/research/projects}, returned code \textbf{301}, this domain is moved to a new URL and is no longer available for use at the given URL.
 
 \end{itemize}
 \begin{figure}[h!]
-  \includegraphics[width=\linewidth]{resources/404_b.png}
-  \caption{404 status code}
-  \label{404 status code}
+  \includegraphics[width=\linewidth]{resources/200_new.png}
+  \caption{200 status code}
+  \label{200 status code}
 \end{figure}
 \begin{itemize}
 
-\item For url \textbf{http://example.com/test.html}, returned code \textbf{404}, since this domain no longer exists or never existed.
+\item For url \textbf{http://example.com}, returned code \textbf{200}, This signifies successful connection to the given website.
+
+\end{itemize}
+\begin{figure}[h!]
+  \includegraphics[width=\linewidth]{resources/200_new_2.png}
+  \caption{200 status code}
+  \label{200 status code}
+\end{figure}
+\begin{itemize}
+
+\item For url \textbf{http://example.com/test.html}, returned code \textbf{200}, This signifies successful connection to the given website.
 
 \end{itemize}
     

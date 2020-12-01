@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.11.13)  30 NOV 2020 23:38
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.11.13)  1 DEC 2020 20:13
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1842,27 +1842,34 @@ es/unikoblenz_urlparser.png>]
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `\hfill' on input line 301.
 
-<resources/403.png, id=133, 1153.30875pt x 189.70876pt>
-File: resources/403.png Graphic file (type png)
-<use resources/403.png>
-Package pdftex.def Info: resources/403.png  used on input line 303.
-(pdftex.def)             Requested size: 418.25555pt x 68.79877pt.
-<resources/404_a.png, id=134, 985.6825pt x 201.75375pt>
-File: resources/404_a.png Graphic file (type png)
-<use resources/404_a.png>
-Package pdftex.def Info: resources/404_a.png  used on input line 313.
-(pdftex.def)             Requested size: 418.25555pt x 85.61029pt.
-<resources/404_b.png, id=135, 1005.7575pt x 187.70125pt>
-File: resources/404_b.png Graphic file (type png)
-<use resources/404_b.png>
-Package pdftex.def Info: resources/404_b.png  used on input line 323.
-(pdftex.def)             Requested size: 418.25555pt x 78.05782pt.
+<resources/301_new.png, id=133, 1123.19624pt x 201.75375pt>
+File: resources/301_new.png Graphic file (type png)
+<use resources/301_new.png>
+Package pdftex.def Info: resources/301_new.png  used on input line 303.
+(pdftex.def)             Requested size: 418.25555pt x 75.12796pt.
+<resources/200_new.png, id=134, 1074.0125pt x 308.15125pt>
+File: resources/200_new.png Graphic file (type png)
+<use resources/200_new.png>
+Package pdftex.def Info: resources/200_new.png  used on input line 313.
+(pdftex.def)             Requested size: 418.25555pt x 120.00452pt.
+<resources/200_new_2.png, id=135, 946.53625pt x 299.1175pt>
+File: resources/200_new_2.png Graphic file (type png)
+<use resources/200_new_2.png>
+Package pdftex.def Info: resources/200_new_2.png  used on input line 323.
+(pdftex.def)             Requested size: 418.25555pt x 132.1735pt.
+File: resources/logo_west_small.png Graphic file (type png)
+<use resources/logo_west_small.png>
+Package pdftex.def Info: resources/logo_west_small.png  used on input line 330.
+
+(pdftex.def)             Requested size: 51.21504pt x 10.63553pt.
+[10 <./resources/301_new.png> <./resources/200_new.png> <./resources/200_new_2.
+png>]
 File: resources/logo_west_small.png Graphic file (type png)
 <use resources/logo_west_small.png>
 Package pdftex.def Info: resources/logo_west_small.png  used on input line 333.
 
 (pdftex.def)             Requested size: 51.21504pt x 10.63553pt.
-[10 <./resources/403.png> <./resources/404_a.png> <./resources/404_b.png>]
+ [11]
 No complaints by nag.
 
 ./assignment-3.tex:333: LaTeX Error: \begin{enumerate} on input line 148 ended 
@@ -1895,11 +1902,11 @@ Package logreq Info: Writing requests to 'assignment-3.run.xml'.
 ### semi simple group (level 1) entered at line 148 (\begingroup)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 39765 strings out of 480608
- 732877 string characters out of 5903629
+ 39764 strings out of 480608
+ 732941 string characters out of 5903629
  1496023 words of memory out of 5000000
- 54859 multiletter control sequences out of 15000+600000
- 602427 words of font info for 124 fonts, out of 8000000 for 9000
+ 54861 multiletter control sequences out of 15000+600000
+ 602261 words of font info for 122 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  64i,15n,81p,10129b,790s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2020/texmf-dist/fonts/enc/dvips/lm/lm-ec.en
@@ -1912,10 +1919,10 @@ lm/lmr8.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/lm/lmr9.pfb>
 </usr/local/texlive/2020/texmf-dist/fonts/type1/public/lm/lmssbx10.pfb></usr/lo
 cal/texlive/2020/texmf-dist/fonts/type1/public/lm/lmtt10.pfb></usr/local/texliv
 e/2020/texmf-dist/fonts/type1/public/lm/lmtt9.pfb>
-Output written on assignment-3.pdf (10 pages, 676572 bytes).
+Output written on assignment-3.pdf (11 pages, 737818 bytes).
 PDF statistics:
- 230 PDF objects out of 1000 (max. 8388607)
- 187 compressed objects within 2 object streams
- 65 named destinations out of 1000 (max. 500000)
+ 234 PDF objects out of 1000 (max. 8388607)
+ 190 compressed objects within 2 object streams
+ 66 named destinations out of 1000 (max. 500000)
  20631 words of extra memory for PDF output out of 20736 (max. 10000000)
 
