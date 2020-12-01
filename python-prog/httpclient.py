@@ -6,8 +6,11 @@ from urlparser import url_parser
 urlInput = input('Enter url: ')
 Returnedurl = url_parser(urlInput)
 url = Returnedurl['domain']
-request = b"GET / HTTP/1.1\nHost: stackoverflow.com\n\n"
+
+request = b'GET / HTTP/1.0\nHost: '+url+'\n\n'
+
 s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+
 s.connect((url, 80))
 s.send((request).encode())
 result = s.recv(10000)
